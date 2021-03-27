@@ -9,28 +9,40 @@ package examen2_.kevinrodriguez;
  *
  * @author Kevin
  */
-class Bateria {
-     String material;
-        int autonomia;
+class Bateria extends tiempo {
 
-        public Bateria(String material, int autonomia) {
-            this.material = material;
-            this.autonomia = autonomia;
-        }
+    String material;
+    int autonomia;
 
-        public String getMaterial() {
-            return material;
-        }
+    public Bateria(String material, int autonomia, int time) {
+        super(time);
+        this.material = material;
+        this.autonomia = autonomia;
+    }
 
-        public void setMaterial(String material) {
-            this.material = material;
-        }
+    public Bateria(String material, int autonomia) {
+        this.material = material;
+        this.autonomia = autonomia;
+    }
 
-        public int getAutonomia() {
-            return autonomia;
-        }
+    public String getMaterial() {
+        return material;
+    }
 
-        public void setAutonomia(int autonomia) {
-            this.autonomia = autonomia;
-        }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public int getAutonomia() {
+        return autonomia;
+    }
+
+    public void setAutonomia(int autonomia) {
+        this.autonomia = autonomia;
+    }
+
+    @Override
+    public String toString() {
+        return "Bateria{" + "material=" + material + ", autonomia=" + autonomia + '}';
+    }
 }

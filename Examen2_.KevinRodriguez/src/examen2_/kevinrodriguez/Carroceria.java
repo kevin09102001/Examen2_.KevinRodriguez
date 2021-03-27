@@ -9,16 +9,19 @@ package examen2_.kevinrodriguez;
  *
  * @author Kevin
  */
-class Carroceria {
+class Carroceria extends tiempo{
     String tipo;
-    int cap_maletero;
+    int capacidad;
 
-    public Carroceria() {
+    public Carroceria(String tipo, int capacidad, int time) {
+        super(time);
+        this.tipo = tipo;
+        this.capacidad = capacidad;
     }
 
-    public Carroceria(String tipo, int cap_maletero) {
+    public Carroceria(String tipo, int capacidad) {
         this.tipo = tipo;
-        this.cap_maletero = cap_maletero;
+        this.capacidad = capacidad;
     }
 
     public String getTipo() {
@@ -29,11 +32,20 @@ class Carroceria {
         this.tipo = tipo;
     }
 
-    public int getCap_maletero() {
-        return cap_maletero;
+    public int getCapacidad() {
+        return capacidad;
     }
 
-    public void setCap_maletero(int cap_maletero) {
-        this.cap_maletero = cap_maletero;
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
+
+    @Override
+    public String toString() {
+        return "Carroceria{" + "tipo=" + tipo + ", capacidad=" + capacidad + '}';
+    }
+
+    
 }
+
+    

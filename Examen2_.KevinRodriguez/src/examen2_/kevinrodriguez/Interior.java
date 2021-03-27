@@ -9,40 +9,54 @@ package examen2_.kevinrodriguez;
  *
  * @author Kevin
  */
-class Interior {
-    String mat_usado,tipo_volante;
-    int botones;
+class Interior extends tiempo {
+    String matusado,tipovolante;
+    int cantbotones;
 
     public Interior() {
     }
 
-    public Interior(String mat_usado, String tipo_volante, int botones) {
-        this.mat_usado = mat_usado;
-        this.tipo_volante = tipo_volante;
-        this.botones = botones;
+    public Interior(String matusado, String tipovolante, int cantbotones, int time) {
+        super(time);
+        this.matusado = matusado;
+        this.tipovolante = tipovolante;
+        this.cantbotones = cantbotones;
     }
 
-    public String getMat_usado() {
-        return mat_usado;
+    public Interior(String matusado, String tipovolante, int cantbotones) {
+        this.matusado = matusado;
+        this.tipovolante = tipovolante;
+        this.cantbotones = cantbotones;
     }
 
-    public void setMat_usado(String mat_usado) {
-        this.mat_usado = mat_usado;
+    public String getMatusado() {
+        return matusado;
     }
 
-    public String getTipo_volante() {
-        return tipo_volante;
+    public void setMatusado(String matusado) {
+        this.matusado = matusado;
     }
 
-    public void setTipo_volante(String tipo_volante) {
-        this.tipo_volante = tipo_volante;
+    public String getTipovolante() {
+        return tipovolante;
     }
 
-    public int getBotones() {
-        return botones;
+    public void setTipovolante(String tipovolante) {
+        this.tipovolante = tipovolante;
     }
 
-    public void setBotones(int botones) {
-        this.botones = botones;
+    public int getCantbotones() {
+        return cantbotones;
     }
+
+    public void setCantbotones(int cantbotones) {
+        this.cantbotones = cantbotones;
+    }
+
+    @Override
+    public String toString() {
+        return "Interior{" + "matusado=" + matusado + ", tipovolante=" + tipovolante + ", cantbotones=" + cantbotones + '}';
+    }
+
+    
 }

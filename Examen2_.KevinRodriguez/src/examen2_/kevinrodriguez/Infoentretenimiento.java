@@ -9,41 +9,51 @@ package examen2_.kevinrodriguez;
  *
  * @author Kevin
  */
-class Infoentretenimiento {
-    int cant_pantalla,ancho_pantalla;
-    boolean visor;
+class Infoentretenimiento extends tiempo {
 
-    public Infoentretenimiento() {
-    }
+    int cantpantalla, ancho;
+    String visor;
 
-    public Infoentretenimiento(int cant_pantalla, int ancho_pantalla, boolean visor) {
-        this.cant_pantalla = cant_pantalla;
-        this.ancho_pantalla = ancho_pantalla;
+    public Infoentretenimiento(int cantpantalla, int ancho, String visor, int time) {
+        super(time);
+        this.cantpantalla = cantpantalla;
+        this.ancho = ancho;
         this.visor = visor;
     }
 
-    public int getCant_pantalla() {
-        return cant_pantalla;
+    public Infoentretenimiento(int cantpantalla, int ancho, String visor) {
+        this.cantpantalla = cantpantalla;
+        this.ancho = ancho;
+        this.visor = visor;
     }
 
-    public void setCant_pantalla(int cant_pantalla) {
-        this.cant_pantalla = cant_pantalla;
+    public int getCantpantalla() {
+        return cantpantalla;
     }
 
-    public int getAncho_pantalla() {
-        return ancho_pantalla;
+    public void setCantpantalla(int cantpantalla) {
+        this.cantpantalla = cantpantalla;
     }
 
-    public void setAncho_pantalla(int ancho_pantalla) {
-        this.ancho_pantalla = ancho_pantalla;
+    public int getAncho() {
+        return ancho;
     }
 
-    public boolean isVisor() {
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    public String getVisor() {
         return visor;
     }
 
-    public void setVisor(boolean visor) {
+    public void setVisor(String visor) {
         this.visor = visor;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Infoentretenimiento{" + "cantpantalla=" + cantpantalla + ", ancho=" + ancho + ", visor=" + visor + '}';
+    }
+
 }

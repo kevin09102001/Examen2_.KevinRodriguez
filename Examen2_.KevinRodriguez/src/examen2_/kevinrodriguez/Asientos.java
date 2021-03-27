@@ -9,18 +9,27 @@ package examen2_.kevinrodriguez;
  *
  * @author Kevin
  */
-class Asientos {
+class Asientos extends tiempo{
      String material,tipo;
-    boolean masaje;
+    String masaje;
 
     public Asientos() {
     }
 
-    public Asientos(String material, String tipo, boolean masaje) {
+    public Asientos(String material, String tipo, String masaje, int time) {
+        super(time);
         this.material = material;
         this.tipo = tipo;
         this.masaje = masaje;
     }
+
+    public Asientos(String material, String tipo, String masaje) {
+        this.material = material;
+        this.tipo = tipo;
+        this.masaje = masaje;
+    }
+
+     
 
     public String getMaterial() {
         return material;
@@ -38,11 +47,18 @@ class Asientos {
         this.tipo = tipo;
     }
 
-    public boolean isMasaje() {
+    public String isMasaje() {
         return masaje;
     }
 
-    public void setMasaje(boolean masaje) {
+    public void setMasaje(String masaje) {
         this.masaje = masaje;
     }
+
+    @Override
+    public String toString() {
+        return "Asientos{" + "material=" + material + ", tipo=" + tipo + ", masaje=" + masaje + '}';
+    }
+    
+    
 }

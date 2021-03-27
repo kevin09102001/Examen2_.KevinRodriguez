@@ -12,11 +12,6 @@ package examen2_.kevinrodriguez;
 public class vehiculo {
     public int vin,asientos;
     public String color, batería, carrocería, interior, sistemainfoentretenimiento;
-     Bateria bateria;
-    Carroceria carroceria;
-    Interior interio;
-    Infoentretenimiento  infoentretenimiento;
-    Asientos asiento;
 
     public vehiculo(int vin, String color, String batería, String carrocería, String interior, String sistemainfoentretenimiento, int asientos) {
         this.vin = vin;
